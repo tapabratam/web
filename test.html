@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mypage</title>
+	<script type="text/javascript">
+		
+		function changeRed() {
+			document.bgColor = "#FF0000";
+		}
+
+		function changeBlue() {
+			document.bgColor = "#0000FF";
+		}
+
+		function changeGreen() {
+			document.bgColor = "#00FF00";
+		}
+
+		function default1() {
+			document.bgColor = "#FFFFFF";
+		}
+	</script>
+</head>
+<body bgcolor="#FFFFFF">
+
+	<!-- <button onclick="change()">Click me</button> -->
+	<br>
+	<button onmousemove="changeRed()" onmouseout="default1()">RED</button>
+	<button onmousemove="changeBlue()" onmouseout="default1()">BLUE</button>
+	<button onmousemove="changeGreen()" onmouseout="default1()">GREEN</button>
+	<br>
+	<h1 id="target">Default</h1>
+	<form name="form1">
+		<input type="text" name="text1">
+		<a href="#" onclick="fun()">Click</a>
+		<!-- <button onclick="fun()">Submit</button> -->
+	</form>
+	
+	<script type="text/javascript">
+		
+		function fun() {
+			var a = document.form1.text1.value;
+			console.log(a);
+			var b = document.getElementById("target");
+			b.value = a;
+		}
+	</script>
+</body>
+</html>
